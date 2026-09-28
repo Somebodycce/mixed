@@ -1,0 +1,40 @@
+def calcpow(number,power):
+    result = 1
+    for i in range(1,power+1):
+        result = result*number
+    return result
+base = int(input("Enter the value for the Base: "))
+expo = int(input("Enter the value for the Exponent: "))
+answer = calcpow(base,expo)
+print(base,"raised to the power",expo,"is",answer)
+
+def calcAreaPeri(Length,Breadth):
+    area = Length * Breadth
+    perimeter = 2*(Length+Breadth)
+    return(area,perimeter)
+l = float(input("Enter length of the rectangle: "))
+b = float(input("Enter the breadth of the rectangle: "))
+area,perimeter = calcAreaPeri(l,b)
+print("Area is:",area,"\nPerimeter is:",perimeter)
+
+def trafficLight():
+    signal = input("Enter the color of the traffic light: ")
+    if signal not in ("RED", "YELLOW", "GREEN"):
+        print("Please enter a valid traffic light color in CAPITALS")
+    else:
+        value = light(signal)
+        if (value == 0):
+            print("STOP, Your life ain't precious lil bruv")
+        elif (value == 1):
+            print("PLEASE GO SLOW")
+        else:
+            print("GO! Thanks for being patient")
+def light(color):
+    if(color == "RED"):
+        return(0)
+    elif (color == "YELLOW"):
+        return(1)
+    else:
+        return(2)
+trafficLight()
+print("SPEED HAS NEVER KILLED ANYONE, SUDDENLY BEING STATIONARY THATS WHAT KILLS YOU")
